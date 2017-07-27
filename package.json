@@ -1,0 +1,21 @@
+{
+  "name": "github-search",
+  "version": "0.2.0",
+  "description": "This workflow is a thin 🍬 wrapper around https://api.github.com/orgs/:orgname/members.",
+  "main": "github-api.js",
+  "dependencies": {
+    "date-fns": "^1.28.5",
+    "node-fetch": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asimpson/github-search-alfred-workflow.git"
+  },
+  "keywords": ["alfred", "workflow", "node", "github"],
+  "author": "Adam Simpson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asimpson/github-search-alfred-workflow/issues"
+  },
+  "homepage": "https://github.com/asimpson/github-search-alfred-workflow#readme"
+}
