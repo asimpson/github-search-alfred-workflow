@@ -68,24 +68,22 @@ const displayList = () => {
     }),
   };
 
-  if (process.env.githubToken) {
-    console.log(JSON.stringify(items));
-  } else {
-    const error = {
-      items: [
-        {
-          subtitle: 'Go to preferences now',
-          title: 'Please add an API token to the workflow',
-          arg: 'pref',
-        },
-      ],
-    };
-
-    console.log(JSON.stringify(error));
-  }
+  console.log(JSON.stringify(items));
 };
 
-if (cacheIsFresh()) {
+if (!process.env.githubToken || !process.env.orgName) {
+  const error = {
+    items: [
+      {
+        subtitle: 'Go to preferences now',
+        title: 'Please add an API token and org name to the workflow',
+        arg: 'pref',
+      },
+    ],
+  };
+
+  console.log(JSON.stringify(error));
+} else if (cacheIsFresh()) {
   displayList();
 } else {
   getUsers(page).then(() => {

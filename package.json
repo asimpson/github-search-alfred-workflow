@@ -1,6 +1,6 @@
 {
   "name": "github-search",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "This workflow is a thin 🍬 wrapper around https://api.github.com/orgs/:orgname/members.",
   "main": "github-api.js",
   "dependencies": {
